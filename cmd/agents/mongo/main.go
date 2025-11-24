@@ -4,11 +4,11 @@ import (
 	"bytes"
 	"context"
 	"fmt"
+	"html/template"
 	"math/rand"
 	"net"
 	"os"
 	"os/exec"
-	"text/template"
 	"time"
 
 	"google.golang.org/grpc"
