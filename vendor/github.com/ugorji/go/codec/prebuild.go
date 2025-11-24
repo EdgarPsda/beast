@@ -1,3 +1,4 @@
+//go:build prebuild
 // +build prebuild
 
 package main
@@ -12,10 +13,10 @@ package main
 import (
 	"bytes"
 	"go/format"
+	"html/template"
 	"io/ioutil"
 	"os"
 	"strings"
-	"text/template"
 )
 
 // genInternalSortableTypes returns the types

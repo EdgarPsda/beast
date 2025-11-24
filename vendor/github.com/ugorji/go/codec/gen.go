@@ -1,3 +1,4 @@
+//go:build codecgen.exec
 // +build codecgen.exec
 
 // Copyright (c) 2012-2018 Ugorji Nwoke. All rights reserved.
@@ -11,6 +12,7 @@ import (
 	"errors"
 	"fmt"
 	"go/format"
+	"html/template"
 	"io"
 	"io/ioutil"
 	"math/rand"
@@ -20,7 +22,6 @@ import (
 	"strconv"
 	"strings"
 	"sync"
-	"text/template"
 	"time"
 	"unicode"
 	"unicode/utf8"
@@ -98,7 +99,9 @@ import (
 // v1: Initial Version
 // v2:
 // v3: Changes for Kubernetes:
-//     changes in signature of some unpublished helper methods and codecgen cmdline arguments.
+//
+//	changes in signature of some unpublished helper methods and codecgen cmdline arguments.
+//
 // v4: Removed separator support from (en|de)cDriver, and refactored codec(gen)
 // v5: changes to support faster json decoding. Let encoder/decoder maintain state of collections.
 // v6: removed unsafe from gen, and now uses codecgen.exec tag

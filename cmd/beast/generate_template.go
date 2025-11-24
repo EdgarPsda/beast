@@ -2,9 +2,9 @@ package main
 
 import (
 	"bytes"
+	"html/template"
 	"os"
 	"path/filepath"
-	"text/template"
 
 	"github.com/sdslabs/beastv4/core"
 	"github.com/sdslabs/beastv4/core/config"
